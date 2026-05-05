@@ -6,7 +6,6 @@ import { useAuth } from "../context/AuthContext";
 import React from "react";
 
 const emptyTask = { title: "", description: "", dueDate: "", priority: "Medium", assignedTo: "" };
-
 export default function DashboardPage() {
   const { user, logout } = useAuth();
   const [projects, setProjects] = useState([]);
