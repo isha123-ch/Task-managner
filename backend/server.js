@@ -36,8 +36,13 @@ app.use((err, req, res, next) => {
   if (err.name === "CastError") return error(res, status.BAD_REQUEST, "Invalid id format");
   return error(res, err.statusCode || status.INTERNAL_SERVER_ERROR, err.message || "Something went wrong");
 });
-
-connectDB().then(() => app.listen(port, () => console.log(`Backend running on http://localhost:${port}`))).catch((err) => {
-  console.error(err.message);
-  process.exit(1);
-});
+connectDB()
+  .then(() => {
+    app.listen(port, "0.0.0.0", () => {
+      console.log(`Server running on port ${port}`);
+    });
+  })
+  .catch((err) => {
+    console.error(err.message);
+    process.exit(1);
+  }); 
