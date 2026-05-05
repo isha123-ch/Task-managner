@@ -1,90 +1,199 @@
-# Team Task Manager - MERN
+# 🚀 Team Task Manager - MERN Stack
 
-Full-stack MERN assignment project with separate `frontend` and `backend` folders.
+A full-stack **Team Task Manager** application built using the **MERN stack**.
+This app allows teams to manage projects, assign tasks, and track progress efficiently.
 
-## Stack
+---
 
-- Frontend: React, Vite, Axios, React Hot Toast, Lucide icons
-- Backend: Node.js, Express.js
-- Database: MongoDB Atlas with Mongoose
-- Auth: JWT and bcrypt
-- Validation: express-validator and Mongoose
+## 🌍 Live Demo
 
-## Single API URL File
+* 🔗 **Frontend**:
+  https://vibrant-purpose-production.up.railway.app/
 
-Change frontend API base URL in one place:
+* 🔗 **Backend API**:
+  https://task-managner-production-81c3.up.railway.app/api
 
-```text
-frontend/src/api/config.js
+* 🔗 **Health Check**:
+  https://task-managner-production-81c3.up.railway.app/api/health
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+* React.js (Vite)
+* Axios
+* React Hot Toast
+* Lucide Icons
+
+### Backend
+
+* Node.js
+* Express.js
+
+### Database
+
+* MongoDB Atlas (Mongoose)
+
+### Authentication
+
+* JWT (JSON Web Tokens)
+* bcrypt
+
+### Validation
+
+* express-validator
+* Mongoose schema validation
+
+---
+
+## 📂 Project Structure
+
+```bash
+Team-Task-Manager/
+│
+├── frontend/
+│   ├── src/
+│   ├── package.json
+│   └── vite.config.js
+│
+├── backend/
+│   ├── routes/
+│   ├── controllers/
+│   ├── models/
+│   └── server.js
 ```
 
-Or set it in `frontend/.env`:
+---
+
+## ⚙️ Environment Configuration
+
+### 📌 Frontend (`frontend/.env`)
 
 ```env
-VITE_API_URL=http://localhost:5000/api
+VITE_API_URL=https://task-managner-production-81c3.up.railway.app/api
 ```
 
-## Backend Setup
+---
+
+### 📌 Backend (`backend/.env`)
+
+```env
+PORT=5000
+MONGODB_URI=your_mongodb_connection_string
+JWT_SECRET=your_secret_key
+CLIENT_URL=https://vibrant-purpose-production.up.railway.app
+```
+
+---
+
+## 🖥️ Local Setup
+
+### 🔹 Backend Setup
 
 ```bash
 cd backend
 npm install
-copy .env.example .env
+cp .env.example .env
 npm run dev
 ```
 
-Add MongoDB Atlas details in `backend/.env`:
+---
 
-```env
-PORT=5000
-MONGODB_URI=mongodb+srv://username:password@cluster0.xxxxx.mongodb.net/team_task_manager?retryWrites=true&w=majority
-JWT_SECRET=change-this-long-random-secret
-CLIENT_URL=http://localhost:5173
-```
-
-## Frontend Setup
+### 🔹 Frontend Setup
 
 ```bash
 cd frontend
 npm install
-copy .env.example .env
+cp .env.example .env
 npm run dev
 ```
 
-Open `http://localhost:5173`.
+---
 
-## Root Commands
+### 🌐 Local URLs
 
-```bash
-npm run install:all
-npm run backend
-npm run frontend
-```
+* Frontend: http://localhost:5173
+* Backend: http://localhost:5000/api
 
-## Features
+---
 
-- Signup and login with JWT
-- Hashed passwords
-- Project creation with creator as Admin
-- Admin add/remove members
-- Admin create, assign, update, delete tasks
-- Members view/update only assigned tasks
-- Dashboard totals, status counts, per-user count, overdue tasks
-- Controller-based backend responses with proper status codes
-- Toast success/error messages in React
+## ✨ Features
 
-## Main API Routes
+* 🔐 User Authentication (Signup/Login with JWT)
+* 🔑 Secure Password Hashing (bcrypt)
+* 📁 Create and Manage Projects
+* 👥 Add/Remove Project Members
+* ✅ Task Assignment and Tracking
+* 🧑‍💼 Role-based Access (Admin & Members)
+* 📊 Dashboard Analytics (status, counts, overdue tasks)
+* 🔄 REST API with proper status codes
+* 🔔 Toast Notifications in UI
+* 🌍 Production Deployment (Railway)
 
-- `POST /api/auth/signup`
-- `POST /api/auth/login`
-- `GET /api/auth/me`
-- `GET /api/projects`
-- `POST /api/projects`
-- `GET /api/projects/:projectId`
-- `POST /api/projects/:projectId/members`
-- `DELETE /api/projects/:projectId/members/:userId`
-- `GET /api/tasks`
-- `POST /api/tasks`
-- `PATCH /api/tasks/:taskId`
-- `DELETE /api/tasks/:taskId`
-- `GET /api/dashboard`
+---
+
+## 📡 API Endpoints
+
+### 🔐 Auth
+
+* `POST /api/auth/signup`
+* `POST /api/auth/login`
+* `GET /api/auth/me`
+
+### 📁 Projects
+
+* `GET /api/projects`
+* `POST /api/projects`
+* `GET /api/projects/:projectId`
+* `POST /api/projects/:projectId/members`
+* `DELETE /api/projects/:projectId/members/:userId`
+
+### ✅ Tasks
+
+* `GET /api/tasks`
+* `POST /api/tasks`
+* `PATCH /api/tasks/:taskId`
+* `DELETE /api/tasks/:taskId`
+
+### 📊 Dashboard
+
+* `GET /api/dashboard`
+
+---
+
+## 💡 Highlights
+
+* Production-ready full-stack app
+* Clean and modular architecture
+* Centralized API configuration
+* Proper CORS handling
+* Environment-based configuration
+* Real-world deployment experience
+
+---
+
+## 📚 What I Learned
+
+* Full-stack development with MERN
+* Authentication using JWT
+* API integration with Axios
+* Deployment using Railway
+* Handling real-world issues (CORS, env variables, build errors)
+
+---
+
+## 🤝 Contributing
+
+Feel free to fork the repo and improve the project!
+
+---
+
+## 📌 Author
+
+**Suhana Chaudhary**
+
+---
+
+⭐ If you like this project, give it a star!
